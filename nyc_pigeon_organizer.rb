@@ -9,10 +9,13 @@ def nyc_pigeon_organizer(data)
     end
   end
 
-
-
-
-
-
 return pigeon_list
+end
+
+def pigeon_color(data)
+  colors = {}
+  data[:color].each do |color, names|
+    colors = color => names
+  end
+  puts colors
 end
