@@ -1,21 +1,28 @@
+
 def nyc_pigeon_organizer(data)
   pigeon_list = {}
 
   data.each do |k, col|
     col.each do |lives, v|
       v.each do |name|
-        pigeon_list[name] = {:color => data[name].key, :gender => 0 , :lives => 0}
+        pigeon_list[name] = {:color => 0, :gender => 0 , :lives => 0}
 
-    end
   end
 
-return pigeon_list
+end
 end
 
-def pigeon_color(data)
-  colors = {}
-  data[:color].each do |color, names|
-    colors = color => names
+    data[:gender].each do |gender, names|
+      names.each do |name|
+        pigeon_list[name][:gender] = [gender.to_s]
+      end
   end
-  puts colors
+
+    data[:lives].each do |home, names|
+      names.each do |name|
+        pigeon_list[name][:lives] = [home]
+      end
+    end
+
+  return pigeon_list
 end
