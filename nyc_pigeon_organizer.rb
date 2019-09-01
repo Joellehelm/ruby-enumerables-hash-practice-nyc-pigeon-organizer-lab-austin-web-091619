@@ -5,7 +5,7 @@ def nyc_pigeon_organizer(data)
   data.each do |k, col|
     col.each do |lives, v|
       v.each do |name|
-        pigeon_list[name] = {:color => 0, :gender => 0 , :lives => 0}
+        pigeon_list[name] = {:color => [], :gender => 0 , :lives => 0}
 
   end
 
