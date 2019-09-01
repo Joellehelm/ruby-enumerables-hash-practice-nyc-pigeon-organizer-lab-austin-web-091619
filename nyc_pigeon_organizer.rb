@@ -27,6 +27,8 @@ end
     data[:color].each do |color, names|
       names.each do |name|
         pigeon_list[name][:color] << color.to_s
+      end
+    end
 
   return pigeon_list
 end
